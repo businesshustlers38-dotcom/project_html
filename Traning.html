@@ -1,0 +1,70 @@
+
+ <style>
+  .chart {
+    color: white;
+    background-color: rgba(141, 141, 14, 0.717);
+    border-radius: 18px;
+    border-style: bold;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.8s, color 0.5s;
+    transition: box-shadow 0.15s;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+
+  } 
+
+  .chart:hover {
+    opacity: 0.9;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+  }
+
+  .chart:active {
+    opacity:0.6;
+  }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+}
+
+[data-theme = dark],
+.theme-dark { 
+  --background-color: #121212;
+  --text-color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);}
+
+  
+
+ </style> 
+<button class ="chart">Add chart</button>
+
+<input type="username" id="username" placeholder="Enter username">
+<input type="password" id="password" placeholder="Enter password">
+<button id="loginBtn">Login</button>
+<button id="logoutBtn">Logout</button>
+<p>Create a account <button id="registerBtn"> >>Here<< </button></p>
+<dd></dd>
+<dt></dt>
+<div>
+  This is in Light Mode if the user hasn't set a preference, or if their preference is set to <code>light</code>.
+</div>
+
+<div data-theme="dark">
+  This is in Dark Mode
+</div>
+
+<div class="theme-dark">
+  This is also in Dark Mode
+</div>
+<div data-theme="dark">
+  This is in Dark Mode
