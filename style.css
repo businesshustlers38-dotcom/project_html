@@ -96,10 +96,13 @@ li {
 
 }
 
-.btn:hover, .btn:focus {
+.btn:hover, .btn:focus-visible {
 
-    background-color: rgb(245, 212, 167);
-    transition: 0.3s;
+    filter: brightness(0.95);
+}
+
+.hero {
+    padding: 2.5rem 1rem 1rem;
 }
 
 button a {
@@ -120,5 +123,48 @@ footer {
     text-align: center;
     width: 100%;
     font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
  
 }
+
+footer a {
+    color: #222;
+
+}
+
+footer a:hover,
+footer a:focus-visible {
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+} 
+
+@media (min-width: 48rem) {
+    .navdiv { padding: 1rem 2rem;}
+    .hero {padding: 3rem 1rem 1.5rem;}
+}
+
+.nav-toggle {
+    color: white;
+    border-radius: 18px;
+    border-style: bold;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.8s, color 0.5s;
+    transition: box-shadow 0.15s;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-toggle:hover {
+    opacity: 0.9;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
+  }
+
+  .nav-toggle:active {
+    opacity:0.6;
+  }
