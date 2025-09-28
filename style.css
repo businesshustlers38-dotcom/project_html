@@ -145,26 +145,3 @@ footer a:focus-visible {
     .hero {padding: 3rem 1rem 1.5rem;}
 }
 
-.nav-toggle {
-    color: white;
-    border-radius: 18px;
-    border-style: bold;
-    font-size: large;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.8s, color 0.5s;
-    transition: box-shadow 0.15s;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.nav-toggle:hover {
-    opacity: 0.9;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.10);
-  }
-
-  .nav-toggle:active {
-    opacity:0.6;
-  }

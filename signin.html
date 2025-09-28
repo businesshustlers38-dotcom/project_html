@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ellenova - Sign up</title>
+   <meta name="description" content="Logga in på Ellenova">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+   <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+   <header class = "site header" role="banner">
+
+    <nav class ="navigation" aria-label="Huvudmeny">
+      <a class="logo" href="#">Ellenova</a>
+
+    </nav>
+
+   </header>
+  
+<main id="main" class="site main">
+  <section class="auth">
+    <div class="auth-card" role="form" aria-labelledby="signin-title">
+      <h1 id="signin-title">Logga in</h1>
+
+      <form action="#" method="post" class="form" novalidate>
+
+        <div class="form__field">
+          <label for="1Email">E-post</label>
+          <input id="1email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="Ellenovalifestyle25@gmail.com"/>
+
+        </div>
+        
+        <div>
+          
+          <label for="1Password">Lösenord</label>
+          <input id="1Password" name="Password" type="password" autocomplete="current-password" minlength="8" required placeholder="********"/>
+
+        </div>
+         
+         <div>
+
+         <label class="checkbox">
+          <input type="checkbox" name="remember" required/>
+         
+         </label>
+         <a class="form__link" href="reset.html">Glöm lösenord?</a>
+
+         </div>
+
+         <button class="btn btn--lg btn--block" type="submit">Skapa konto</button>
+
+         <p class="form__meta">Ny hos oss?<a class="btn btn--sm" href="signup.html">Skapa konto</a></p>
+
+      </form>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

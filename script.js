@@ -69,3 +69,4 @@ function multiplay (b , a) {
     return b * a;
 }
 console.log(multiplay(5, 10));
+
