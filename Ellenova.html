@@ -16,25 +16,25 @@
 <body>
     <a class="skip-link" href="#main">Hoppa till innehåll</a>
 
-    <header class = "site-header" role="banner" >
+    <header class="site-header" role="banner" >
         
-
      <nav class ="navigation" aria-label="Huvudmeny">
+         <div class = "navdiv">
+          <a class = "logo" href="Home.html">Ellenova</a>
+          
 
      <details class="nav-toggle">
-     <summary class="nav-summary" aria-label="Öppna meny">Menu</summary>
-        <div class = "navdiv">
-        <div class = "logo"><a href="#">Ellenova</a></div>
+     <summary class="nav-summary" aria-label="Öppna meny"><ion-icon class="icon" aria-hidden="true" name="menu-outline"></ion-icon>Menu</summary>
+        
          
         <ul class="nav__list">
 
-        <li><a href="Home page.html" aria-current="page">Home</a></li>
+        <li><a href="Home.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="contact.html">Contact</a></li>
-
-        <button><a class="btn" href="signup.html">Sign Up</a></button>
-        <button><a class="btn" href="signin.html">Logga In</a></button>
+        <li><a class="btn btn--sm" href="signup.html">Sign Up</a></li>
+        <li><a class="btn btn--sm btn--secondary" href="signin.html">Logga In</a></li>
 
     </ul>
 
@@ -67,27 +67,32 @@ The brand is known for its commitment to using high-quality ingredients and inno
 
 </article>
 
+
+
  </main>
 
   <aside class="site-aside" role="complementary" aria-labelledby="title-aside">
 
     <h2 class="Lower-text" id="title-aside">Follow us on social media</h2>
+    <hr class="nav__divider" aria-hidden="true">
 
-    <ul>
-        <li class="Icons">
-            
-          <a href="https://www.facebook.com/Ellenova" target="_blank" rel="noopener">Facebook</a> |
-          <a href="https://www.instagram.com/Ellenova" target="_blank" rel="noopener">Instagram</a> |
-          <a href="https://www.twitter.com/Ellenova" target="_blank" rel="noopener">Twitter</a>
+    <ul class="social" aria-label="Follow US">
+        <li><a class="social__link" href="https://www.facebook.com/Ellenova" target="_blank" rel="noopener"> 
+          <ion-icon class="icon" name="logo-facebook" aria-hidden="true"></ion-icon><span>Facebook</span></a></li>
+        <li><a class="social__link" href="https://www.instagram.com/Ellenova" target="_blank" rel="noopener">
 
-        </li>
+        <ion-icon class="icon" name="logo-instagram" aria-hidden="true"></ion-icon><span>Instagram</span></a></li>  
+        <li><a class="social__link" href="https://www.twitter.com/Ellenova" target="_blank" rel="noopener">
+        <ion-icon class="icon" name="logo-X" aria-hidden="true"></ion-icon><span>Twitter</span></a></li>
+
+        
     </ul>
   </aside>
 
 <footer class="site-footer" role="contentinfo"> 
     
 <p>&copy; 2025 Ellenova. Alla rättigheter förbehållna.</p>
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
 <address>
 
 <p>Contact us: 070-123 45 67</p>
@@ -98,6 +103,7 @@ The brand is known for its commitment to using high-quality ingredients and inno
 
 </address>
 
-</footer> 
+</footer>
 
+<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
