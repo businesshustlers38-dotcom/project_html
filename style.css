@@ -14,7 +14,6 @@ h1 {
 }
 
 body {
-   background-color: rgb(104, 150, 180);
    background-image: linear-gradient(to bottom, rgba(0,0,0,0.10), rgba(0,0,0,0.10) ), url("golden_makeup_3d_20251001154715_1.webp");
    background-size: cover;
    background-repeat: no-repeat;
@@ -32,7 +31,7 @@ a:hover, a:focus-visible {text-decoration: underline; text-underline-offset: 3px
 p {
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(1rem, 0.95 + 0.6vw, 1.4rem);
+    font-size: clamp(1rem, 0.95rem + 0.6vh, 1.4rem);
     text-align: center;
     margin: 0 1rem 1.5rem;
 }
@@ -57,11 +56,18 @@ p {
 }
 
 .logo {
+  font-size: clamp(1.5rem, 1.1rem + 1.2vh, 2.5rem);
+  font-weight: 700;
+  color: white;
+}
 
-    font-size: clamp(1.5rem, 1.1rem +  1.2vw, 2.5rem);
-    font-weight: 700;
-    color: white;
-
+.logo a {
+  display: inline-block;
+  font-size: clamp(1.5rem, 1.1rem + 1.2vh, 2.5rem);
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  flex: 0 0 auto;
 }
 
 .social {
@@ -102,29 +108,17 @@ margin: 0.5rem 0;}
 
 }
 
-.navigation ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 
-.navigation li {
-
-    
-    display: inline-block;
-}
 
 .navigation li a {
 
     color:white;
-    font-size: clamp(1rem, 0.9vw + 0.5rem, 1.25rem);
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
     font-weight: bold;
     padding: 0.25rem 0.1rem;
 
 }
+
 
 .navigation a[aria-current="page"] {
 
@@ -153,16 +147,18 @@ margin: 0.5rem 0;}
   position: sticky; top: 0; z-index: 20;
 }
 
-.nav-toggle {margin-left: auto;}
+.nav-toggle {margin-left: auto; position: relative;}
 
 .nav-summary {
   cursor: pointer;
   list-style: none;
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 0.16rem;
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 12px;
   background: transparent;
   color: #fff;
+  margin: 1rem;
+  
 }
 
 .nav-summary::-webkit-details-marker {display: none;}
@@ -177,14 +173,35 @@ margin: 0.5rem 0;}
 .nav__list {
   display: none;
   flex-direction: column;
-  gap: 0.75rem;
-  margin: 0.5rem 0 0;
-  padding: 0.75rem;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
   list-style: none;
   background: rgba(0, 0, 0, 0.30);
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 12px; backdrop-filter: blur(6px);
+
+  position: absolute;
+  
+  right: 0;
+  z-index: 30;
+  max-width: min(92vw, 22rem);
+  width: max-content;
+  overflow: auto;
+  max-height: calc(100svh - 4rem);
 }
+
+.nav__list a {
+  color: #fff;
+  text-decoration: none;
+
+  padding: 0.5rem 0.25rem;
+  min-height: 30px;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.15rem);
+}
+
+
 
 .nav__list a:hover,
 .nav__list a:focus-visible {
@@ -205,7 +222,7 @@ margin: 0.5rem 0;}
 
 
 .btn {
-
+    background-color: #fff;
     display: inline-block;
     align-items: center;
     justify-content: center;
@@ -217,8 +234,8 @@ margin: 0.5rem 0;}
 
     padding: 0.6rem 0.9rem;
     min-width: 90px;
-    border-radius: 12px;
-    border: 2px solid transparent;
+    border-radius: 15px;
+    border: 3px solid transparent;
 
     
     color: #111;
@@ -240,6 +257,8 @@ margin: 0.5rem 0;}
   color: #fff;
   border-color: rgba(255, 255, 255,0.85);
   text-align: center;
+  padding: 0.45rem 0.75rem;
+  min-width: auto;
 }
 
 .btn--secondary {
@@ -279,20 +298,20 @@ footer a:focus-visible {
 
 } 
 
-@media (min-width: 48rem) {
-    .navdiv { padding: 1rem 2rem;}
-    .hero {padding: 3rem 1rem 1.5rem;}
-
-    .nav-summary {
-      display: flex;
-      background: transparent;
-      backdrop-filter: none;
-      border: 0;
-      border-radius: 0;
-      padding: 0;
-      margin: 0;
-      flex-direction: row;
-      gap: 1rem;
-    }
+@media (min-width: 48rem) { 
+  .nav-toggle{position: static;}
+  .nav__list { 
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background: transparent;
+    border: 0;
+    backdrop-filter: none;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    width: auto;
+    max-height: none;
+  }
 }
-
