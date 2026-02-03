@@ -1,0 +1,403 @@
+
+/* Basen */
+
+*, *::before, *::after {box-sizing: border-box;}
+html, body { margin: 0; padding: 0;}
+html {height: auto; overflow-x: hidden ;}
+
+/* Bakgrunden */
+body {
+   
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  position: relative;
+  font-weight: bold;
+
+
+}
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+   background:
+    linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
+    url("senbon_zakura_background_20251004134329_1.webp") center / cover no-repeat;
+  background-color: #0f0f0f;
+}
+
+/* Header och navigation */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+ margin-left: auto;
+
+  
+  
+}
+
+.Menu-bar {
+  
+  text-align: center;
+  margin-left: auto;
+  
+   
+  
+}
+
+.Menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.Menu-bar ul li {
+
+
+  margin: 7px;
+  padding: 8px;
+  position: relative;
+
+}
+
+.Menu-bar ul li a {
+  text-decoration: none;
+  color:#fff;
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+  font-weight: bold;
+  
+}
+
+
+.Menu-bar ul li a:hover, .Menu-bar ul li a:focus-visible {
+  color: #000;
+  background-color: #fff;
+}
+
+
+.Menu-bar .fa-solid {
+  margin-right: 0px;
+  flex: 0 0 auto;
+  width: 1rem;
+  font-size: 1rem;
+
+}
+
+
+
+
+
+/* Sektionen */
+
+.hero__content {
+
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  
+}
+
+main {flex: 1;}
+
+
+
+.lead {
+  font-size: 20px;
+}
+
+.artic-text{
+  font-size: 1.5rem;
+}
+
+a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Knappar */
+
+.btn {
+  color: #fff;
+  
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: bisque;
+  color: black;
+}
+
+.cards {
+
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.card__link {
+  font-size: 1rem;
+  color: white;
+}
+
+.card__link:hover {
+  background-color: bisque;
+  color: #000;
+}
+
+.btn-ghost {
+  font-size: 1rem;
+  color: white;
+}
+
+.btn-ghost:hover {
+  background-color: bisque;
+  color: #000;
+}
+
+.modal__box {
+  
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+
+}
+
+
+
+
+
+
+/* Dold skip link */
+.Skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+.Skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  z-index: 10000;
+  text-decoration: none;
+  
+}
+
+.nav__toggle {
+  position: absolute;
+  left: -9999px;
+}
+
+
+.nav__burger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  
+}
+
+.Menu-bar nav .menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__toggle:checked ~ .Menu-bar nav .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 64px;
+  background: rgba(0, 0 , 0, 0.3);
+  backdrop-filter: blur(4px);
+  padding: 12px;
+  z-index: 1000;
+}
+
+
+.nav__burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+
+
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Footer*/
+
+
+.site-footer {
+  
+  text-decoration: none;
+  margin-top: auto;
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 2rem 0.75rem;
+
+  
+}
+
+.container-footer {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    padding: 2rem 1rem;
+  
+}
+
+
+
+.container-footer h2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  gap: 5px;
+}
+
+
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin: 0.25rem 0;
+}
+
+.contact-list a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 0.3rem 0.5rem;
+  color: rgb(236, 236, 236);
+  font-size: 15px;
+}
+
+
+footer a:hover,
+footer a:focus-visible {
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+} 
+
+/* Mobil först och sen desktop*/
+
+@media (min-width: 600px) {
+  .About-page .hero__content {
+    width: min(85vw, 70ch);
+    padding: 2.5rem;
+    margin: 2rem auto;
+  }
+
+   .Menu-bar ul {
+    flex-wrap: nowrap;
+    gap: 1rem;
+   }
+    .nav__burger {display: none;}
+   .Menu-bar nav .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: static;
+    background: transparent;
+    padding: 0;
+   }
+
+  
+
+   
+
+   
+
+   
+}
+
+   
+
+  
+
+
+  
+
+
+@media (min-width: 1024px) {
+  .About-page .hero__content {
+    width: min(70vw, 70ch);
+    padding: 2.5rem;
+    margin: 3.5rem auto;
+  }
+
+  
+}
+
+
