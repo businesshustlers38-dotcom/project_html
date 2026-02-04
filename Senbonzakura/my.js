@@ -1,11 +1,8 @@
- /* console.log("My script is loaded and running!");
 
-function setupModal() {
-  const openModalButton = document.querySelector('.btn');
-  const modalBox = document.querySelector('.modal__box');
-  const closeModalButton = modalBox.querySelector('button[type="button"]');}
   
-  // 1. Interaktivitet & DOM
+// Mål: Skapa en sökmoter för min livstil hemsida
+
+// 1. Interaktivitet & DOM
 
   function toggleModal() {
     modalBox.classList.toggle('modal--is-open');
@@ -21,34 +18,45 @@ function setupModal() {
 
   // 4. Validering & felhantering (grund)
 
-  /* */
-
+  let product = {
+    data:[{
+      productName: "Mascara",
+      category: "Cosmetics",
+      price: 299,
+      image: "senbonzakura_cosmetics_3d_20251029092059_1 (1).webp"
+    },
   
+  {
+      productName: "Parfume",
+      category: "Smell good",
+      price: 299,
+      image: "senbonzakura_cosmetics_3d_20251029092059_1 (1).webp"
+    },
+  
+  {
+      productName: "Lipstick",
+      category: "Cosmetics",
+      price: 299,
+      image: "senbonzakura_cosmetics_3d_20251029092059_1 (1).webp"
+    },
+  
+  {
+      productName: "Eyeliner",
+      category: "Cosmetics",
+      price: 299,
+      image: "senbonzakura_cosmetics_3d_20251029092059_1 (1).webp"
+    }]
+  };
 
-/*
-function performMathOperations(tal) {
-    console.log("Avrundat:", Math.round(tal));
-    console.log("Uppåt (ceil):", Math.ceil(tal));
-    console.log("Nedåt (floor):", Math.floor(tal));
-}
-console.log("Matematiska operationer för talet 4.7:");
-performMathOperations(4.7);
-*/
+  for (let i of product.data) {
+    let card = document.createElement("div");
+    card.classList.add("card", "i.category");
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("image-container");
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    imgContainer.appendChild(image);
+    card.appendChild(imgContainer);
 
-/*
-function generateRandomNumber(min, max) {
- return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-console.log("Slumptal mellan 1 och 100:", generateRandomNumber(1, 100));
-
-
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
-
-document.getElementById('myElement').addEventListener('mousedown', function() {
-console.log('Mouse button pressed!');
-});
-
-*/
-document.getElementById('myElement').addEventListener('mouseup', function() {
-console.log('Mouse button released!');
-});
+    document.getElementById("products").appendChild(card);
+  }

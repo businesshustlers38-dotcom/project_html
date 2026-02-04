@@ -26,7 +26,7 @@ body::before {
   z-index: -1;
    background:
     linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
-    url("senbon_zakura_background_20251004134329_1.webp") center / cover no-repeat;
+    url("senbon_zakura_background_20251004134329_1\ \(1\).webp") center / cover no-repeat;
   background-color: #0f0f0f;
 }
 
@@ -119,7 +119,7 @@ body::before {
 
 
 
-/* Transiton för bilden */
+/* Transtion för bilden */
 
 .Bounce-img{
 display: block;
@@ -187,7 +187,50 @@ a:focus-visible {
 
 }
 
+/* Search bar */
 
+.wrapper {
+width: 100%;
+margin:  0 auto;
+}
+
+#search-container {
+  margin: 1em 0;}
+#search-container input {
+  width: 40%;
+  padding: 1em 0.3em;
+  font-size: 1em;
+  border-bottom: 2px solid black;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #fff;
+}
+
+#search-container input:focus {
+  
+  border-bottom: #fff;
+}
+
+.button-value {
+  border: 2px solid pink;
+  padding: 1em 2em;
+  border-radius: 3em;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+
+#search-container button {
+  padding: 1em 0.5em;
+  font-size: 1em;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
 /* Dold skip link och dashbord för meny*/
 .Skip-link {
