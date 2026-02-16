@@ -47,22 +47,25 @@
 
   <div class="wrapper">
     <div id="search-container">
-      <input class="searcher 1" type="search" id="searchengine" placeholder="Serach Here"/>
-      <button id="Serach">Search</button>
+      <input type="search" id="search-input" placeholder="Search here" />
+<button id="search">Search</button>
 
   </div>
 </div>
 
 <div id="buttons">
 
-  <button class="button-value">All Item</button>
-
+  <button class="button-value" onclick="filterProduct('all')">All Item</button>
+  <button class="button-value" onclick="filterProduct('Cosmetics')">Cosmetics</button>
+  <button class="button-value" onclick="filterProduct('Smell-good')">Smell good</button>
 </div>
+<div>
 
 <div id="products">
 
 </div>
 
+</div>
 
   <main class="Main-site" id="main" role="main">
 
@@ -86,12 +89,7 @@
     
     <section class="container">
 
-      <div class="controls">
-        <input id="searchInput"/>
-      </div>
-  
-      <div class="cards" role="list">
-        <p></p>
+    
 
    <article class="item-list">
 
@@ -99,13 +97,7 @@
       Nu är del 2 av mit försök och förstå hur koden funkar.
     </h2>
 
-    <button class="btn">
-      öppna meddelande
-    </button>
 
-    <p>
-      Jag håller koppla sakerna tillsammans.
-    </p>
 
     <a class="card__link" href="https://www.kicks.se/">My inspraiton webbsites</a>
 
@@ -118,15 +110,12 @@
 
   <aside class="modal" id="modall"  role="dialog">
   
-<div class="modal__box">
-
-  <button type="button">Stäng</button>
 
  <h2 id="moddall-title">Nu är jag ett steg framåt</h2>
  <p id="modall-desc">Snart kommer jag klara första steget</p>
  <a class="btn-ghost" href="https://www.ahlens.se/">One of my favorite sites</a>
 
-  </div>
+
 
   </aside>
 

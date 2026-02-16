@@ -195,20 +195,27 @@ margin:  0 auto;
 }
 
 #search-container {
-  margin: 1em 0;}
+  margin: 1em 0;
+}
+
+
 #search-container input {
   width: 40%;
   padding: 1em 0.3em;
   font-size: 1em;
+
+  border: none;
   border-bottom: 2px solid black;
   border-radius: 4px;
+
   background-color: transparent;
   color: #fff;
+  outline: none;
 }
 
 #search-container input:focus {
   
-  border-bottom: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .button-value {
@@ -218,6 +225,11 @@ margin:  0 auto;
   background-color: transparent;
   cursor: pointer;
   color: #fff;
+}
+
+.active {
+  background-color: pink;
+  color: black;
 }
 
 
@@ -230,6 +242,53 @@ margin:  0 auto;
   color: #000;
   cursor: pointer;
   border-radius: 4px;
+}
+
+#products {
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-column-gap: 1.5em;
+  padding: 2em 0;
+
+}
+
+.card {
+  background-color: white;
+  max-width: 18em;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 1em 2em 2.5em rgba(0, 0, 0, 0.2);
+
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+ }
+
+ .container {
+  padding-top: 1em;
+  color: black;
+ }
+
+ .container h5 {
+font-weight: 500;
+}
+
+.hide {
+  display: none;
 }
 
 /* Dold skip link och dashbord för meny*/
@@ -392,6 +451,25 @@ footer a:focus-visible {
 
 /* Mobil först och sen desktop*/
 
+
+@media screen and (max-width: 720px) {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 10em;
+  }
+
+  .card {
+    max-width: 10em;
+    margin-top: 1em;
+  }
+
+  #products {
+  grid-template-columns: auto auto;
+  grid-column-gap: 1em;
+  }
+
+}
 
 
 @media (min-width: 600px) {
