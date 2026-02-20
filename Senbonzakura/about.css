@@ -291,6 +291,95 @@ font-weight: 500;
   display: none;
 }
 
+/* Formulär */
+
+#contact-form {
+max-width: 500px;
+margin: 3rem auto;
+padding: 2rem;
+border-radius: 10px;
+border: 1px solid #fff;
+background: rgba(255, 255, 255, 0.08);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 0.7rem;
+  margin-bottom: 0.6rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+#contact-for textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+#contact-form input::placeholder, #contact-formtextarea::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  border-color: pink;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#contact-form button [type="submit"] {
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: pink;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.19s ease, transform 0.15s ease;
+}
+
+#contact-form button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+#contact-form button[type="submit"]:active {
+  filter: brightness(0.9);
+  transform: translateY(0);
+}
+
+#form.msg {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10pc;
+  line-height: 1.4;
+}
+
+#form-msg.error {
+  background: rgba(255, 77, 77, 0.12);
+  border: 1px solid rgba(255, 77, 77, 0.35);
+  color: rgba(255, 220, 220, 0.95);
+}
+
+#form-msg.success {
+  background: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.35);
+  color: rgba(210, 255, 230, 0.95);
+}
+
+/* Om form-msg är tomt: visa inte en tom låda */
+#form-msg:empty {
+  display: none;
+}
+
+
+
 /* Dold skip link och dashbord för meny*/
 .Skip-link {
   position: absolute;
@@ -450,6 +539,19 @@ footer a:focus-visible {
 } 
 
 /* Mobil först och sen desktop*/
+
+@media (max-width: 600px) {
+  #contact-form {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 1rem;
+  }
+}
+
 
 
 @media screen and (max-width: 720px) {

@@ -20,10 +20,14 @@
     <span></span><span></span><span></span>
   </label>
   
+
+  
   
   
 
     <nav class="Menu-bar" role="navigation">
+
+      
 
    <img src="Senbonlogo.jpg " height="50" alt="" > 
 
@@ -43,10 +47,14 @@
   <main class="Main-site" id="main" role="main">
 
     
-  
+  <form id="contact-form" novalidate>
+  <input id="name" type="text" placeholder="Namn" />
+  <input id="email" type="email" placeholder="Email" />
+  <textarea id="message" placeholder="Meddelande"></textarea>
+  <button type="submit">Skicka</button>
+  <div id="form-msg" aria-live="polite"></div>
+</form>
     
-
-  
 
   </main>
 
@@ -81,6 +89,6 @@
   
   </footer>
 
-  
+    <script src="Contact.js" defer></script>
 </body>
 </html>
