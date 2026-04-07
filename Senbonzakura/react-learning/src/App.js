@@ -3,7 +3,7 @@ import './App.css';
 
 // Komponent med props
 function Welcome({ name }) {
-  return <h1>Välkommen, {name}!</h1>;
+  return <h1>Börja att lära dig koda, {name}!</h1>;
 }
 
 // Komponent med state och events
@@ -45,7 +45,7 @@ function App() {
     <div className="App">
       <Welcome name="Mikiel" />
       <Counter />
-      <h2>Lär dig:</h2>
+      <h2>kör nu:</h2>
       <ItemList items={items} />
     </div>
   );
