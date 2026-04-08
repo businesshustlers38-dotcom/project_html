@@ -45,6 +45,7 @@ function App() {
       <Welcome name="Mikiel" />
       <Counter />
       <HooksExample />
+      <userEffect />
       <h2>börja sakta och lära mig:</h2>
       <ItemList items={items} />
     </div>
@@ -72,3 +73,4 @@ return (
     </div>
   );
 }
+
